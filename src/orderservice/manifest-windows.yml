@@ -1,0 +1,12 @@
+---
+applications:
+- name: orderprocessing
+  memory: 1G
+  stack: windows2016
+  command: .\OrderService
+  env:
+    ASPNETCORE_ENVIRONMENT: Production
+  services:
+   - mStoreRegistry
+   - mStoreConfig
+   - mStoreOrdersDB

@@ -1,0 +1,13 @@
+---
+applications:
+- name: musicstore
+  routes:
+  - route: musicstore-oded.apps.demo.io
+  buildpack: dotnet_core_buildpack
+  memory: 1G
+  env:
+    ASPNETCORE_ENVIRONMENT: Production
+  services:
+   - mStoreRegistry
+   - mStoreConfig
+   - mStoreStoreDB
